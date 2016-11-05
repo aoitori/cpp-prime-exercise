@@ -17,6 +17,8 @@ int main ()
     auto ed = partition(words.begin(), words.end(), morethanfive);
     for (auto be = words.begin(); be != ed; ++be)
         cout << *be << endl;
+    
+    return 0;
 }
 
 bool morethanfive (const string &s)
