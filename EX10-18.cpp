@@ -39,7 +39,7 @@ void biggies(vector<string> &words, vector<string>::size_type sz)
                 [](const string &a, const string &b)
                 {return a.size() < b.size();});
     auto wc = partition(words.begin(), words.end(),
-                      [sz](const string &a){return a.size() >= sz;});
+                      [sz](const string &a){return a.size() >= sz;}); //EX10-19; stable_partition
     auto counter = wc - words.begin();
     cout << counter << " " << make_plural(counter, "word", "s")
          << " of length " << sz << " or longer" << endl;
